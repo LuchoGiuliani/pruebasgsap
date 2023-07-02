@@ -32,8 +32,7 @@ function App() {
         scrollTrigger: {
           trigger: container,
           markers: true,
-          pin: true,
-          pinSpacer:false,
+          pin: true,  
           scrub: 1,
           snap: 1 / (paneles.length - 1),
           end: "+=3500",
@@ -44,7 +43,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className=" overflow-hidden">
     
       <div className="text-black text-9x1 h-screen">Comienzo de pag</div>
       <div className="container" ref={main}>
@@ -70,7 +69,7 @@ function App() {
         <section className="panel bg-gray-800">FIVE</section>
       </div>
       <div className="text-black text-9x1 h-screen">FINAL DE LA PAG</div>
-    </>
+    </div>
   );
 }
 
